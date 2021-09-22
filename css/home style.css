@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    line-height: 150%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+@font-face {
+    font-family: RobotoHeader;
+    src:url(../code/Roboto-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: NunitoBody;
+    src:url(../code/Nunito-Regular.ttf);
+  }
+
+/* TITLE */
+.title {
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover ;
+    margin :0;
+    background-image: linear-gradient(rgba(88, 89, 92, 0.692),rgba(88, 89, 92, 0.692)),url(../images/nct2020.jpg);
+    min-height: 100vh;
+    scroll-snap-align: center;
+}
+
+.ncttitle {
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    width: 100%;
+    color: rgb(224, 224, 224);
+    font-size: 100px;
+    font-family: RobotoHeader;
+}
+
+/* GRID SECTION */
+.wrapper {
+    display: grid;
+    grid-template-columns: 20% 23% 7% 7% 23% 20%;
+    grid-template-rows: 100vh 35vh 30vh 35vh 4vh 100vh 9vh;
+    grid-template-areas: "memberstitle memberstitle memberstext memberstext memberstext memberstext"
+                         "seven seven seven seven seven seven"
+                         "five projects projects projects projects eight"
+                         "six six six six six six"
+                         "one one one one one one"
+                         "two empathy three three resonance four"
+                         "footer footer footer footer footer footer";
+    background-color: whitesmoke;
+
+}
+
+.empty1 {
+    grid-area: one;
+}
+
+.empty2 {
+    grid-area: two;
+}
+
+.empty3 {
+    grid-area: three;
+}
+
+.empty4 {
+    grid-area: four;
+}
+
+.empty5 {
+    grid-area: five;
+}
+
+.empty6 {
+    grid-area: six;
+}
+
+.empty7 {
+    grid-area: seven;
+}
+
+.empty8 {
+    grid-area: eight;
+}
+
+.memberstitle {
+    grid-area: memberstitle;
+    align-self: center;
+    text-align: end;
+    line-height: 170%;
+    font-size: 33px;
+    font-family: font;
+    font-family: RobotoHeader;
+    scroll-snap-align: center;
+}
+
+.memberstext {
+    grid-area: memberstext;
+    align-self: center;
+    font-size: large;
+    padding: 15%;
+    line-height: 180%;
+    font-family: NunitoBody;
+}
+
+.empty5, .empty6, .empty7, .empty8 {
+    background-image: linear-gradient(rgba(182, 182, 182, 0.603),rgba(182, 182, 182, 0.603)), url(../images/project\ background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}   
+
+.projects {
+    grid-area: projects;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 20px;
+    overflow: scroll;
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scroll-snap-align: center;
+}
+
+.projects h1 {
+    font-family: RobotoHeader;
+    font-size: 35px;
+    padding-bottom: 2px;
+}
+
+.projects p {
+    font-family: NunitoBody;
+    font-size: 20px;
+    line-height: 170%;
+    padding-bottom: 10px;
+}
+
+.empathy {
+    grid-area: empathy;
+    overflow: scroll;
+    text-align: center;
+    background-color: white;
+    align-self: center;
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.empathy p {
+    padding: 15px;
+    font-family: NunitoBody;
+}
+
+.empathy img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 90%;
+}
+
+.resonance {
+    grid-area: resonance;
+    overflow: scroll;
+    text-align: center;
+    align-self: center;
+    background-color: white;
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scroll-snap-align: center;
+}
+
+.resonance p {
+    padding: 15px;
+    font-family: NunitoBody;
+}
+
+.resonance img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 90%;
+}
+
+/* FOOTER */
+.tablefooter {
+    grid-area: footer;
+    font-family: NunitoBody;
+    font-size: 20px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;  
+    scroll-snap-align: center;
+}
+
+.tablefooter table tr td a {
+    color: rgb(59, 59, 59);
+    padding-left: 10vh;
+    padding-right: 10vh;
+    
+}
+
+.tablefooter table tr td a:visited {
+    color: rgb(59, 59, 59);
+}
+
+/* WHEN VIEWPORT SMALLER THAN 800PX */
+@media (max-width :800px) {
+
+    body {
+        scroll-snap-type: none;
+        overflow-y: none;
+    }
+    
+    .wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "memberstitle"
+                             "memberstext"
+                             "projects"
+                             "empathy"
+                             "resonance"
+                             "footer";
+    }
+
+    .memberstitle {
+        text-align: center;
+        padding-bottom: 0;
+        font-size: x-large;
+    }
+
+    .memberstext {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .projects {
+        text-align: center;
+        background-color: whitesmoke;
+        padding: 30px;
+        box-shadow: none;
+        font-size: x-small;
+    }
+
+    .empathy {
+        box-shadow: none;
+        background-color: whitesmoke;
+    }
+
+    .empathy p {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .empathy img {
+        width: 60%;
+    }
+
+    .resonance {
+        box-shadow: none;
+        background-color: whitesmoke;
+    }
+
+    .resonance p {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .resonance img {
+        width: 60%;
+    }
+
+.tablefooter {
+        background-color: whitesmoke;
+        margin: 3vh ;
+    }
+
+.tablefooter table tr td a {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    }   
+}

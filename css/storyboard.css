@@ -1,0 +1,39 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "nav"
+                         "links"
+                         "homepage"
+                         "bodya"
+                         "bodyb";
+
+}
+
+.homepage {
+    grid-area: homepage;
+}
+
+.homepage img, .bodya img, .bodyb img, .links img, .nav img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 90%;
+}
+
+.bodya {
+    grid-area: bodya;
+}
+
+.bodyb {
+    grid-area: bodyb;
+}
+
+.links {
+    grid-area: links;
+}
+
+.nav {
+    grid-area: nav;
+}

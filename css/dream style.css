@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    line-height: 150%;
+    background-color: whitesmoke;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+}
+
+@font-face {
+    font-family: RobotoHeader;
+    src:url(../code/Roboto-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: NunitoBody;
+    src:url(../code/Nunito-Regular.ttf);
+  }
+
+/* IMAGE TITLE BANNER STUFF */
+.title {
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover ;
+    margin :0;
+    background-image: linear-gradient(rgba(255, 248, 205, 0.514),rgba(255, 255, 255, 0.514)),url(../images/hello\ future.jpg);
+    min-height: 100vh;
+    scroll-snap-align: center;
+}
+
+.dreamtitle {
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 70px;
+    font-family: RobotoHeader;
+}
+
+/* GRID FOR CONTENT */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 13% 30% 7% 37% 13%;
+    grid-template-rows: 100vh 80vh 20vh 100vh 35vh 30vh 35vh 9vh;
+    grid-template-areas: "backgroundtitle backgroundtitle backgroundinfo backgroundinfo backgroundinfo"
+                         "one one one one one"
+                         "group group group group group"
+                         "achievements achievements achievements achievements achievements"
+                         "two two two two two"
+                         "three success success success four"
+                         "five five five five five"
+                         "footer footer footer footer footer";                  
+}
+
+.empty1 { 
+    grid-area: one;
+    background-image: linear-gradient(rgba(234, 241, 243, 0.308),rgba(234, 241, 243, 0.308)), url(../images/background\ two\ dream.jpg);
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+}
+
+.empty2 {
+    grid-area: two;
+}
+
+.empty3 {
+    grid-area: three;
+}
+
+.empty4 {
+    grid-area: four;
+}
+
+.empty5 {
+    grid-area: five;
+}
+
+.backgroundtitle {
+    grid-area: backgroundtitle;
+    align-self: center;
+    text-align: end;
+    line-height: 170%;
+    font-size: 30px;
+    font-family: font;
+    font-family: RobotoHeader;
+    scroll-snap-align: center;
+
+}
+
+.backgroundinfo {
+    grid-area: backgroundinfo;
+    align-self: center;
+    font-size: large;
+    padding: 15%;
+    line-height: 180%;
+    font-family: NunitoBody;
+}
+
+.group {
+    grid-area: group;
+    padding: 10px;
+    text-align: center;
+    overflow: scroll;
+}
+
+.group h2 {
+    font-family: RobotoHeader;
+}
+
+.group p {
+    font-family: NunitoBody;
+    padding: 60px;
+    padding-top: 0;
+    margin: 10%;
+    margin-top: 0;
+}
+
+.achievements {
+    grid-area: achievements;
+    text-align: center;
+    align-self: center;
+    padding-right: 35px;
+    margin: 26vh;
+    padding-left: 35px;
+    background-color: white;
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    scroll-snap-align: center;
+}
+
+.achievements h2 {
+    font-family: RobotoHeader;
+}
+
+.achievements p {
+    font-family: NunitoBody
+}
+
+.success {
+    grid-area: success;
+    padding: 10px;
+    text-align: center;
+    padding: 40px;
+    scroll-snap-align: center;
+}
+
+.success h2 {
+    font-family: RobotoHeader;
+}
+
+.success p {
+    font-family: NunitoBody
+}
+
+.tablefooter {
+    grid-area: footer;
+    font-family: NunitoBody;
+    font-size: 20px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;  
+    scroll-snap-align: center;
+}
+
+.tablefooter table tr td a {
+    color: rgb(59, 59, 59);
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
+.tablefooter table tr td a:visited {
+    color: rgb(59, 59, 59);
+}
+
+.empty2, .empty3, .empty4, .empty5, .success {
+    background-size: cover;
+    background-image: linear-gradient(rgba(219, 232, 236, 0.61),rgba(219, 232, 236, 0.61)), url(../images/balloons.jpg) ;
+    background-attachment: fixed;
+}
+
+@media (max-width :800px) {
+
+    body {
+        scroll-snap-type: none;
+        overflow-y: none;
+    }
+    
+    .wrapper {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: auto auto auto auto auto auto;
+                grid-template-areas: "backgroundtitle"
+                                    "backgroundinfo"
+                                    "group"
+                                    "achievements"
+                                    "success"
+                                    "footer";
+    }
+
+    .backgroundtitle {
+        text-align: center;
+        padding-bottom: 0;
+        font-size: 20px;
+    }
+
+    .backgroundinfo {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .group {
+        box-shadow: none;
+        background-color: whitesmoke;
+        padding: 30px;
+    }
+
+    .success {
+        background: none;
+    }
+
+    .achievements {
+        background-color: whitesmoke;
+        box-shadow: none;
+        margin: 10px;
+    }
+
+    .tablefooter {
+        background-color: whitesmoke;
+        margin: 3vh ;
+    }
+
+    .tablefooter table tr td a {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+}

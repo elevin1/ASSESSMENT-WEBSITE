@@ -1,0 +1,54 @@
+@font-face {
+    font-family: NunitoBody;
+    src:url(../code/Nunito-Regular.ttf);
+  }
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    height: 80px;
+    z-index: 12;
+    width: 100%;
+}
+
+.menu li{
+    list-style: none;
+    display: inline-block;
+    padding: 30px;
+    text-align: center;
+    position: sticky;
+    font-family: NunitoBody;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+.menu li a:visited {
+    color: white;
+    text-decoration: underline;
+    padding: 5px;
+    transition: 0.07s;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+    padding: 5px;
+    transition: 0.07s;
+}
+
+@media (max-width :800px) {
+    .menu li a {
+        text-align: center;
+    }
+
+    .menu li a:hover {
+        text-decoration: none;
+        transition: none;
+
+        color: black;
+    }
+}

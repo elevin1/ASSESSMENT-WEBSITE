@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    line-height: 150%;
+    background-color: whitesmoke;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+@font-face {
+    font-family: RobotoHeader;
+    src:url(../code/Roboto-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: NunitoBody;
+    src:url(../code/Nunito-Regular.ttf);
+  }
+
+/* TITLE */
+.title {
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover ;
+    margin :0;
+    background-image: linear-gradient(rgba(102, 102, 102, 0.589),rgba(102, 102, 102, 0.589)),url(../images/header.png);
+    min-height: 100vh;
+    scroll-snap-align: center;
+}
+
+.ncttitle {
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    width: 100%;
+    color: rgb(224, 224, 224);
+    font-size: 100px;
+    font-family: RobotoHeader;
+}
+
+/* GRID SECTION */
+.wrapper {
+    display: grid;
+    grid-template-columns: 15% 28% 7% 7% 28% 15%;
+    grid-template-rows: 100vh 40vh 20vh 40vh 100vh 4vh 10vh 43vh 3vh 43vh 15vh;
+    grid-template-areas: "backgroundtitle backgroundtitle backgroundinfo backgroundinfo backgroundinfo backgroundinfo"
+                         "one one one one one one"
+                         "two members members members members three"
+                         "four four four four four four"
+                         "concepts concepts concepts concepts concepts concepts"
+                         "five five five five five five"
+                         ". tracks tracks tracks tracks ."
+                         "six fromhome seven seven maw eight"
+                         "nine nine nine nine nine nine"
+                         "ten workit eleven eleven love twelve"
+                         "footer footer footer footer footer footer";
+}
+
+/* FILLER SPACES */
+.empty1 {
+    grid-area: one;
+}
+
+.empty2 {
+    grid-area: two;
+}
+
+.empty3 {
+    grid-area: three;
+}
+
+.empty4 {
+    grid-area: four;
+}
+
+.empty5 {
+    grid-area: five;
+}
+
+.empty6 {
+    grid-area: six;
+}
+
+.empty7 {
+    grid-area: seven;
+}
+
+.empty8 {
+    grid-area: eight;
+}
+
+.empty9 {
+    grid-area: nine;
+}
+
+.empty10 {
+    grid-area: ten;
+}
+
+.empty11 {
+    grid-area: eleven;
+}
+
+.empty12 {
+    grid-area: twelve;
+}
+
+/* BACKGROUND INFO */
+.backgroundtitle {
+    grid-area: backgroundtitle;
+    align-self: center;
+    text-align: end;
+    line-height: 170%;
+    font-size: 33px;
+    font-family: font;
+    font-family: RobotoHeader;
+    scroll-snap-align: center;
+
+}
+
+.backgroundinfo {
+    grid-area: backgroundinfo;
+    align-self: center;
+    font-size: large;
+    padding: 15%;
+    line-height: 180%;
+    font-family: NunitoBody;
+
+}
+
+/* MEMBERS */
+.members {
+    grid-area: members;
+    text-align: center;
+    padding: 30px;
+    padding-top: 0;
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: scroll;
+    scroll-snap-align: center;
+}
+
+.members h1 {
+    font-family: RobotoHeader;
+}
+
+.members p {
+    font-family: NunitoBody;
+}
+
+/* MEMBERS BACKGROUND IMAGE */
+.empty1, .empty2, .empty3, .empty4 {
+    background-image: linear-gradient(rgba(124, 122, 122, 0.479),rgba(124, 122, 122, 0.479)),url(../images/nct2020.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+/* CONCEPTS */
+.concepts {
+    grid-area: concepts;
+    align-self: center;
+    text-align: center;
+    font-size: larger;
+    padding-left: 6%;
+    padding-right: 6%;
+    scroll-snap-align: center;
+}
+
+.concepts h1 {
+    font-family: RobotoHeader;
+}
+
+.concepts p {
+    font-family: NunitoBody;
+}
+
+/* TRACKS */
+.tracks {
+    grid-area: tracks;
+    font-family: NunitoBody;
+    text-align: center;
+    align-self: center;
+    font-size: 22px;
+    scroll-snap-align: start;
+}
+
+/* TRACK IMAGE CARDS */
+.fromhome {
+    grid-area: fromhome;
+}
+
+.maw {
+    grid-area: maw;
+}
+
+.workit {
+    grid-area: workit;
+}
+
+.love {
+    grid-area: love;
+}
+
+.fromhome img, .maw img, .workit img, .love img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 90%;
+    
+}
+
+.fromhome, .maw, .workit, .love {
+    font-family: NunitoBody;
+    text-align: center;
+    font-size: x-large;
+    font-style: italic;
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-self: center;
+    background-color: white;
+   
+}
+
+/* FOOTER */
+.tablefooter {
+    grid-area: footer;
+    font-family: NunitoBody;
+    font-size: 20px;
+    text-align: center;
+    justify-self: center;
+    align-self: center; 
+    margin-top: 25px; 
+    margin-bottom: 10px;
+    scroll-snap-align: start;
+}
+
+.tablefooter table tr td a {
+    color: rgb(59, 59, 59);
+    padding-left: 10vh;
+    padding-right: 10vh;
+    
+}
+
+.tablefooter table tr td a:visited {
+    color: rgb(59, 59, 59);
+}
+
+@media (max-width :800px) {
+
+body {
+    scroll-snap-type: none;
+    overflow-y: none;
+}
+    .wrapper {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: "backgroundtitle"
+                             "backgroundinfo"
+                             "members"
+                             "concepts"
+                             "tracks"
+                             "fromhome"
+                             "maw"
+                             "workit"
+                             "love"
+                             "footer";
+    }
+    
+    .backgroundtitle {
+        text-align: center;
+    }
+
+    .backgroundinfo {
+        text-align: center;
+    }
+
+    .members {
+        box-shadow: none;
+    }
+
+    .concepts p {
+        font-size: medium;
+    }
+
+    .tracks {
+        font-size: large;
+    }
+
+    .fromhome img, .maw img, .workit img, .love img {
+        width: 60%;
+    }
+
+    .fromhome, .maw, .workit, .love {
+        box-shadow: none;
+        background-color: whitesmoke;
+        font-size: large;
+    }
+}
